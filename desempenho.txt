@@ -1,0 +1,9 @@
+mulher	D_fisico	D_Psicologico
+M1	30	35
+M2	40	50
+M3	75	70
+M4	50	50
+M5	35	30
+M6	60	65
+M7	70	55
+M8	55	55
