@@ -1,8 +1,16 @@
+#Regras para nomes de variáveis:
+    #São aceitos letras, números, ponto e underline.
+    #Necessariamente a variável precisa começar com uma letra ou ponto.
+    #Não são aceitos variáveis que começem com caracteres diferentes, como números por exemplo.
+    #Não são aceitos nomes de variáveis que contém palavras reservadas da linguagem.
+    #Para declarar uma variável pode-se usar <- ou =
+    
+
 x=10
 x
-y=20
+y<-20
 y
-z=30
+z<-30
 z
 
 x+y+z
