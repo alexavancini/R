@@ -1,11 +1,14 @@
-#Regras para nomes de variáveis:
+#Regras para manipulação de variáveis:
     #São aceitos letras, números, ponto e underline.
     #Necessariamente a variável precisa começar com uma letra ou ponto.
     #Não são aceitos variáveis que começem com caracteres diferentes, como números por exemplo.
     #Não são aceitos nomes de variáveis que contém palavras reservadas da linguagem.
     #Para declarar uma variável pode-se usar <- ou =
+    #O valor armazenado na variável não precisa obrigatoriamente ser número, pode ser, também, letras. Para isso, usa-se as "aspas".
+    #As variáveis não precisam ser declaradas uma de cada vez, há possibilidade de declarar mais de uma variável de uma vez só.
+    #Se você nomear uma variável e em seguida nomear novamente com um valor diferente, você reescreve o valor da variável.
+    #É possível apagar a variável
     
-
 x=10
 x
 y<-20
@@ -23,3 +26,18 @@ x-y-z
 
 (x+y+z)^3
 (10+20+30)*(10+20+30)*(10+20+30)
+
+k <- "banana"
+v <- "maçã"
+k+v
+
+a <- b <- c <- 10
+a <- x*4
+b <- y^2
+c <- x+y
+
+rm(x)
+rm(y)
+rm(z)
+
+rm(list = ls())
