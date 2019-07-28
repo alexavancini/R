@@ -36,4 +36,17 @@ typeof(i)
 j<-FALSE
 typeof(j)
 
+g & h
+g & i
+h & i
+
+i & j
+j & h
+j & g
+
+g | i
+g | j
+
+
+
 
