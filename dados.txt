@@ -1,0 +1,13 @@
+Nome	Idade	Sexo	Peso	Altura
+Alex	33	M	82	1.71
+Rafael	18	M	77	1.70
+Maria	25	F	60	1.66
+Carlos	40	M	79	1.76
+Marcela	18	F	65	1.59
+Rosa	22	F	55	1.67
+Michel	33	M	80	1.72
+Allan	33	M	77	1.70
+Vanusa	55	F	60	1.45
+Carla	40	F	79	1.73
+Marcos	22	M	55	1.59
+Cintia	22	F	55	1.81
