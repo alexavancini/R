@@ -1,0 +1,52 @@
+a <- readline("Digite o valor aqui:")
+b <- paste("programação","em R")
+
+paste("O valor digitado em a é:",a) #A função paste converte os valores para caracteres
+c <- paste("O valor digitado em a é:",a)
+
+print(c)
+
+#Criando um script
+nome <- readline("Digite o nome da amostra: ")
+peso <- readline("Digite o peso da amostra: ")
+resultado <- paste("A amostra", nome, "pesa", peso)
+print(resultado)
+
+#Modificando o separador da concatenação da função paste
+?paste
+
+codigo <- readline("digite o código da pesquisa:")
+tipoamostra <- readline("digite o tipo da amostra:")
+pesquisador  <- readline("digite o nome do/a pesquisador/a:")
+resultado2 <- paste(codigo,tipoamostra,pesquisador, sep = "-")
+print(resultado2)
+
+amostra1 <- readline("Digite o peso da amostra1: ")
+amostra2 <- readline("Digite o peso da amostras2 ")
+amostra3 <- readline("Digite o peso da amostras3 ")
+sum(amostra1,amostra2,amostra3)
+#Vai retornar um erro na soma de strings
+
+#Confirindo o tipo de dados das variáveis
+typeof(amostra1)
+typeof(amostra2)
+typeof(amostra3)
+
+#Convertendo o valor das variáveis characters em integer
+
+amostra1 <- readline("Digite o peso da amostra1: ")
+amostra1 <- as.integer(amostra1)
+
+amostra2 <- readline("Digite o peso da amostras2: ")
+amostra2 <- as.integer(amostra2)
+
+amostra3 <- readline("Digite o peso da amostras3: ")
+amostra3 <- as.integer(amostra3)
+
+resultado3 <- sum(amostra1,amostra2,amostra3)
+
+print(resultado)
+#O resultado virá arredondado, característica de um número inteiro
+
+#Resolvendo o problema do arredondamento do número inteiro
+
