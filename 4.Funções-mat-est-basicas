@@ -2,6 +2,55 @@ sqrt(16)
 sqrt(9)
 sqrt(25)
 
+x <- 10
+sqrt(x)
+
+
+factorial(2)
+factorial(4)
+factorial(6)
+factoril(x)
+
+y <- -4
+abs(y) #Retorna o valor absoluto do número
+
+round(1.4)
+round(1.5)
+
+round(1.4999999999999)
+
+round(4.6789, digits = 3)
+round(4.6789, digits = 2)
+round(4.6789, digits = 1)
+
+signif(100/3,digits = 3) #signif trabalha com digits como a quantidade de digitos do resultado inteiro
+round(100/3,digits = 3) #round trabalha com digits igual ao número di digitos depois da virgula
+
+ceiling(1.9999) #Arredonada para o próximo número inteiro
+ceiling(1.6666)
+ceiling(1.2222)
+ceiling(1.0001)
+
+floor(1.9999) #Arredonda para o número inteiro anterior
+floor(1.6666)
+floor(1.2222)
+floor(1.0001)
+
+trunc(100/3) #trunc elimina a parte decimal do número, enquanto o floor só não mostra na apresentação.
+
+log10(10)
+log10(100)
+
+log(10, base = 3.4076)
+log(10, base = 2)
+
+round(log(x,base = 2), digits = 3)
+signif(log(x,base = 2), digits = 3)
+floor(log(x,base = 2), digits = 3)
+ceiling(log(x,base = 2), digits = 3)
+trunc(log(x,base = 2), digits = 3)
+
+
 w=c(10,20,30,40,50)
 w
 a=c(1:10)
@@ -72,16 +121,6 @@ max(c)
 min(c)
 range(c)
 
-log(10)
-log(100)
-
-log10(10)
-log10(100)
-
-log(10, base = 3.4076)
-log(10, base = 2)
-
-
 sin(9)
 cos(9)
 tan(9)
@@ -97,12 +136,6 @@ cos(pi)
 tan(pi)
 
 exp(2)
-
-factorial(2)
-factorial(4)
-factorial(6)
-
-
 
 d=(x+y+z)-mean(w)*median(c)/sqrt(y)+max(a)^4
 d
@@ -120,24 +153,6 @@ e1
 
 e==e1
 
-ceiling(1.9999)
-ceiling(1.6666)
-ceiling(1.2222)
-ceiling(1.0001)
-
-floor(1.9999)
-floor(1.6666)
-floor(1.2222)
-floor(1.0001)
-
-round(1.4)
-round(1.5)
-
-round(1.4999999999999)
-
-round(4.6789, digits = 3)
-round(4.6789, digits = 2)
-round(4.6789, digits = 1)
 
 #Logical vectors
 
