@@ -1,5 +1,10 @@
 #Logical vectors
-
+    > maior
+    < menor
+    == igual
+    != diferente
+    & and/e
+    
 10 > 5
 10 < 5
 
