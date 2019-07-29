@@ -48,5 +48,17 @@ resultado3 <- sum(amostra1,amostra2,amostra3)
 print(resultado)
 #O resultado virá arredondado, característica de um número inteiro
 
-#Resolvendo o problema do arredondamento do número inteiro
+#Resolvendo o problema do arredondamento do número inteiro, convertendo para double
+amostra1 <- readline("Digite o peso da amostra1: ")
+amostra1 <- as.double(amostra1)
+
+amostra2 <- readline("Digite o peso da amostras2: ")
+amostra2 <- as.double(amostra2)
+
+amostra3 <- readline("Digite o peso da amostras3: ")
+amostra3 <- as.double(amostra3)
+
+resultado3 <- sum(amostra1,amostra2,amostra3)
+
+print(resultado3)
 
