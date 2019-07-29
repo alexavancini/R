@@ -1,0 +1,20 @@
+#while = enquanto
+
+amostra <- 1
+
+while(amostra <=4){
+  valorteste <- readline("Digite o valor do teste: ")
+  valorteste <- as.double(valorteste)
+  amostra <- valorteste + amostra
+  print(amostra)
+}
+
+#for = para
+
+for(i in 1:10){
+  valorteste <- readline("Digite o valor do teste: ")
+  valorteste <- as.double(valorteste)
+  resultado <- valorteste + i
+  print(resultado)
+}
+
