@@ -1,5 +1,17 @@
+getwd()
 setwd("~/Scaricati") #Setando a pasta de trabalho
-dados=read.table("dados.txt", header = T, sep = "\t")
+
+dir()#Mostra o conteúdo do diretorio atual de trabalho
+dire(diretorio) #Mostra o conteudo do diretorio indicado
+dir("../") #Mostra o conteudo da pasta anterior a pasta atual de trabalho
+dir("../../") #Mostra o conteudo de duas pasta anteriores da pasta atual de trabalho
+
+dados <- read.table("dados.txt", header = T, sep = "\t") #sep="" = indica o separador que o dataframe está utilizando. "\t" = Tabulação (TAB).
+?read.table
+
+dados=read.table("dados.txt", header = T, sep = "\t", skip = 3) #Skip="Pula", não leva em consideração os 3 primeiros dados do dataframe iniciando a partir do 4º
+dados
+
 names(dados) #Reconhecendo os cabeçalhos do dataframe
 attach(dados) #Apontando para o data frame que estamos trabalhando
 dados 
