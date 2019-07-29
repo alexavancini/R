@@ -1,1 +1,26 @@
-s
+#Logical vectors
+
+10 > 5
+10 < 5
+
+g=20
+g>15
+15<g
+
+h=50
+g>50
+g<50
+
+i=20
+g==i
+g>=i
+g<=i
+
+g!=h
+g!=i
+
+i & g < h
+i & g > h
+
+i & h < g
+i & h > g
