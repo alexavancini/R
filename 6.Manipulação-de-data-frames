@@ -1,0 +1,205 @@
+setwd("~/Scaricati") #Setando a pasta de trabalho
+dados=read.table("dados.txt", header = T, sep = "\t")
+names(dados) #Reconhecendo os cabeçalhos do dataframe
+attach(dados) #Apontando para o data frame que estamos trabalhando
+dados 
+View(dados)
+
+dados[order(Nome)] #Ordenando por nome
+order(dados$Nome)
+dados <- dados[order(dados$Nome),]
+dados
+
+dados=read.table("dados.txt", header = T, sep = "\t")
+
+dados <- dados[order(dados$Idade),]
+dados
+dados[order(Idade),] #Ordenando por idade
+dados[order(Peso),] #Ordenando por peso
+dados[order(Altura),] #Ordenando po altura
+
+dados[order(dados$Idade),] #Ordenando apenas em função de uma coluna, deste modo a ordenação segue uma ordem da posição do dado em relação ao dataframe original
+dados[order(dados$Idade,dados$Peso),] #Ordenando em função de duas colunas
+dados[order(dados$Idade,dados$Peso, dados$Altura),] #Ordenando em função de 3 colunas
+
+?order
+order(Nome, decreasing = T)
+order(Idade, decreasing = T)
+dados[order(Nome, decreasing = T),]
+dados[order(Idade, decreasing = T),]
+
+dadosidade=dados[,c(1,2)] #Criando o grupo de dados apenas com nome e idade
+dadosidade
+dadossexo=dados[,c(1,3)] #Criando o grupo de dados apenas com nome e sexo
+dadossexo
+dadospeso=dados[,c(1,4)] #Criando o grupo de dados apenas com nome e peso
+dadospeso
+dadosaltura=dados[,c(1,5)] #Criando o grupo de dados apenas com nome e altura
+dadosaltura
+
+dadosidade
+rm(dadosidade) #Delete um valor lógico
+
+dadosnis=dados[,c(1,2,3)] #Criando o grupo de dados apenas com nome, idade e sexo.
+dadosnis
+dadosnip=dados[,c(1,2,4)] #Criando o grupo de dados apenas com nome, idade e peso.
+dadosnip
+dadosnpa=dados[,c(1,4,5)] #Criando o grupo de dados apenas com nome, peso e altura.
+dadosnpa
+
+dadossexo[Sexo=="F",] #Dados apenas femininos,f iltrando por sexo F, em aspas porque é texto
+dadossexo[Sexo=="M",] #Filtrando por sexo M, em aspas porque é texto
+dadosexo
+dadossexo[Idade<=25,] #Filtrando por idade (dadossexo) e por idade <=25
+dadossexo[Idade>=25,] #Filtrando por idade (dadossexo) e por idade >=25
+
+dados[Idade<=25,] #Filtrando o dataframe completo por idade >=25
+dados[Idade>=25,] #Filtrando o dataframe completo por idade <=25
+
+dados[Idade>=25&Sexo=="F",] #Filtrando o dataframe completo por idade e Sexo >=25
+dados[Idade>=25&Sexo=="M",] #Filtrando o dataframe completo por idade e Sexo >=25
+dados[Idade>=25&Sexo=="M"&Altura>1.70,] #Filtrando o dataframe completo por idade e Sexo >=25
+dados[Idade>=25&Sexo=="M"&Altura>1.70&Idade>35,] #Filtrando o dataframe completo por idade,Sexo e altura.
+dados
+
+dados$Idade #Extrair apenas os dados da Idade de apenas uma coluna
+dados$Altura #Extrando apenas os dados de altura
+dados$Peso #Extraindo os dados apenas do peso
+
+dados[[2]] #Outra forma de extrair apenas os dados da Idade de apenas uma coluna
+dados[[3]] #Extrando apenas os dados de sexo
+dados[[4]] #Extrando apenas os dados de peso
+dados[[5]] #Extrando apenas os dados de altura
+
+sum(dados[[2]]) #Soma da coluna idade (361)
+mean(dados[[2]]) #Media aritimetica da coluna idade (361/12)
+median(dados[[4]]) #Mediana da coluna peso
+
+dadosf=dadossexo[Sexo=="F",] #Usando a mesma forma em um data frame já manipulado
+dadossexo
+dadosf
+dadosf$Nome
+dadosf$Sexo
+
+idademaior30 <- dados$Idade<=30 #Criando um vetor lógico
+dados
+idademaior30
+
+dados[idademaior30,] #Utilizando o vetor lógico para usar nas linhas (antes da virgula dentro do colchete), em branco depois da virgula são as colunas (todas)
+dados[idademaior30,1:3]
+dados[idademaior30,4:5]
+dados[idademaior30,c(2,5)] #Selecionando duas colunas desejadas no vizinhas
+dados
+
+ncol(dados) #ncol retorma o número de colunas de um dataframe
+dados1 <- dados[idademaior30,1:ncol(dados)] #ncol pode ser usado quando não sabemos o número exato de colunas
+dados1
+
+head(dados) #Primeiros 6 valores do dataframe
+tail(dados) #Seis ultimos valores do dataframe
+dados
+
+dados$Cidade <- 1:12 #Inserindo uma nova coluna no dataframe
+dados
+dados$Codigo <- runif(12) #runif cria numeros aleatorios
+dados$Codigo <- floor(runif(12))
+dados$Codigo <- floor(runif(12, min = 5, max = 30)) #função floor arredonda valores
+dados$Identificação <- LETTERS[1:12]
+dados
+
+dados$Pesosomado2 <- dados$Peso+2 #Inserindo uma coluna nova usando uma coluna antiga como base
+dados
+dados$Alturadividido2 <-dados$Altura/2
+dados
+
+dados$Alturadividido2 <- NULL #Deletando uma coluna (Colocar o valor NULL)
+dados
+dados <- dados[,-8] #Outra forma de deletar uma coluna
+dados
+
+colnames(dados)
+colnames(dados)[3] #Isolando só o título de uma coluna
+#Trocar o nome de uma coluna
+colnames(dados)[3]<- "Gênero" #Alterando o nome da coluna.. Sexo --> Gênero
+dados
+
+row.names(dados)[12] <-18 #Alterando o nome de uma linha.. 12 --> 18
+dados
+
+dados<-dados[c(1,3,4,5,2)] #Alterando as posições das colunas
+dados
+dados<-dados[c(1,5,2,3,4)] #Alterando as posições das colunas
+dados
+
+dados=read.table("dados.txt", header = T)
+dados2=read.table("dados2.txt", header = T)
+dados3=read.table("dados3.txt", header = T)
+
+cbind(dados, dados2) #"Juntando" dataframes diferentes por colunas
+rbind(dados, dados3) #"Juntando" dataframes diferentes por linhas (As colunas são iguais)
+
+(dados4 <- data.frame(
+    Estado=(c("SP","SP","MG","MG","PR","SP","SP","MG","MG","PR","RJ","RJ")),
+    Bairro=(c("Cubatão","Centro","Cubatão","Prados","Cubatão","Vila Ilze",
+              "Cubatão","Centro","Cubatão","Figueiredo","Prados","Cubatão"))
+    ))
+
+dados4
+dim(dados4) #retorna quantas linhas e colunas o dataframe possui
+str(dados4) #retorna a natureza dos dados que o dataframe possui
+dir() #lista os arquivos que o diretório padrão setado contém
+
+dim(dados)
+str(dados)
+
+cbind(dados, dados4)
+dados
+dados <- cbind(dados,dados4)
+dados <- cbind(dados4,dados)
+
+dados
+
+(dados5 <- data.frame(
+    Nome="João",
+    Idade=70,
+    Sexo="M",
+    Peso=90,
+    Altura=185,
+    Estado="AM",
+    Bairro="Asfaltinho"
+))
+
+dados5
+rbind(dados, dados5) #Combinando o dataframe dados com dados5 apenas linhas
+rbind(dados,dados[1,]) #Combinando ao dataframe dados a linha 1 dele mesmo duplicada (no final)
+dados <-rbind(dados,dados[1,])
+dados
+
+duplicated(dados$Nome) #Opção defaul não mostra todos os duplicados, mas sim, a apartir do segundo duplicado (Excluí da visualização o primeiro dado)
+duplicated(dados$Idade)
+
+dadosidadedup <- dados[duplicated(dados$Idade),]
+dadosidadedup
+
+dadosnomedup <- dados[duplicated(dados$Nome),]
+dadosnomedup
+
+dados[which(duplicated(dados)),] #Opção defaul não mostra todos os duplicados, mas sim, a apartir do segundo duplicado (Excluí da visualização o primeiro dado)
+
+dados[-which(duplicated(dados$Idade)),] #Função which reconhece valores = TRUE. O "menos" na frente do argumetno exclui quem ele reconhece como TRUE
+dados <- dados[-which(duplicated(dados$Idade)),]
+#Para dar certo é preciso restaurar o dataframe dados e duplicar novamente a última linha do Nome "Alex"
+dados
+dados <- dados[-which(duplicated(dados$Nome)),]
+dados
+
+write.table(
+      x=dados,
+      file = "dadosEXPORTADO.txt",
+      col.names = T,
+      row.names = F,
+      quote = F,
+      sep = "\t"
+          )
+
+dir()
