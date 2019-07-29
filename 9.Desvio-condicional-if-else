@@ -1,0 +1,43 @@
+#Desvio condicional simples
+#Desvio condicional composto
+#Desvio condicional concatenado
+
+#Desvio condicional simples, trata apenas uma condição, a verdadeira
+x <- 10
+if (x == 10){
+  resposta <- "Sim, a variável x é igual a 10."
+  print(resposta)
+}
+
+#Desvio condicional composto, trata as duas condições, a verdadeira e a falsa
+x <- 10
+if (x == 10){
+  resposta <- "Sim, a variável x é igual a 10."
+  print(resposta)
+} else {
+  resposta <- "Não, a variável x não é  igual a 10"
+  print(respostanegativa)
+}
+
+#Desvio concatenado, trata a possibilidade de 3 tipos de resposta a partir do teste lógico.
+#Nova pergunta: x é maior, menor ou igual a 10?
+x <- 5
+if (x == 10){
+  resposta <- "A variável x é igual a 10."
+  print(resposta)
+} else if (x<10){
+  resposta <- "A variável x é menor que 10"
+  print(resposta)
+} else {
+  resposta <- "A variável x é maior que 10."
+  print(resposta)}
+  
+#Melhorando o código (eliminando as varias linhas iguais print(resposta)
+x <- 5
+if (x == 10){
+  resposta <- "A variável x é igual a 10."
+} else if (x<10){
+  resposta <- "A variável x é menor que 10"
+} else {
+  resposta <- "A variável x é maior que 10."}
+print(resposta)
