@@ -1,0 +1,11 @@
+args(setwd) #O comando args nos ajuda a lembrar a sintaxe de um comando
+args(getwd)
+args(dir)
+args(read.table)
+
+apropos("wd") #O comando apropos nos ajuda a lembrar de um comando se lembrarmos parte deste comando
+apropos("table")
+
+?read.table
+??read.table
+?plot
