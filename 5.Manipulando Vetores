@@ -1,0 +1,37 @@
+#Generating regular sequences
+x <- 10
+typeof(x)
+x
+
+y <- 1.5:10
+typeof(y)
+y
+
+seq(1,10,by=0.5)
+seq(1,50, by=5)
+f=seq(1,10,by=0.5)
+
+mean(f)
+median(f)
+
+g <- c(1,7,30,40,50)
+g
+
+mean(g)
+median(g)
+
+h <- rep(2, times=5)
+h
+
+i=c(11:20,1:10,2:30,7,14,9)
+i
+
+j=c("alex","amauri","angela","allan")
+j
+
+sort(j)
+sort.list(j)
+
+sort(i)
+sort.list(i)
+
