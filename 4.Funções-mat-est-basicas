@@ -65,16 +65,21 @@ sum(b)
 
 length(a)
 length(b)
-length(c)
 
 mean(a)
 median(a)
-mean(b)
-median(b)
 
 mean(b)
 median(b)
-sd(a)
+
+c <- runif(30, min = 5, max = 60) #runif gera numeros aleatorios(com decimais)
+c
+typeof(c)
+length(c)
+mean(c)
+median(c)
+
+sd(c)
 
 max(c)
 min(c)
