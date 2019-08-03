@@ -14,7 +14,7 @@ f=seq(1,10,by=0.5)
 mean(f)
 median(f)
 
-g <- c(1,7,30,40,50)
+g <- c(1,7,30,40,50) #c = combine
 g
 
 mean(g)
@@ -35,3 +35,31 @@ sort.list(j)
 sort(i)
 sort.list(i)
 
+l <- 1:5
+m <- 20:25
+n <- c(l,m)
+n
+
+o <- c("Genética", "Evolução", "Bioinformática", "Botânica")
+o
+is.numeric(o)
+is.double(o)
+is.integer(o)
+is.logical(o)
+is.vector(o)
+is.character(o)
+
+is.numeric(l)
+is.double(m)
+is.integer(m)
+is.numeric(m)
+
+is.(...)
+str(o)
+str(l)
+str(m)
+str(c)
+
+length(o)
+length(m)
+length(c)
