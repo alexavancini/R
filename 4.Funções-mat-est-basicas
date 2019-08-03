@@ -51,71 +51,30 @@ ceiling(log(x,base = 2), digits = 3)
 trunc(log(x,base = 2), digits = 3)
 
 
-w=c(10,20,30,40,50)
-w
-a=c(1:10)
+a <- 1:10
 a
 
-a1=1.5:10
-a1
-
-b=w+a
+b <- 1.5:30
 b
 
-#Generating regular sequences
-seq(1,10,by=0.5)
-seq(1,50, by=5)
-f=seq(1,10,by=0.5)
+sum(a)
+1+2+3+4+5+6+7+8+9+10
 
-s5 <- rep(i, times=5)
-s5
-
-sum(f)
-a1
-sum(a1)
+sum(b)
 1.5+2.5+3.5+4.5+5.5+6.5+7.5+8.5+9.5
 
-
-f=seq(1,10,by=0.5)
-f
-f1 = seq(length=51,from=-5, by=.2)
-f1
-f2 = seq(length=51,from=-5, by=.1)
-f2
-
-rep(5,3)
-rep(10,5)
-rep(8,10)
-
-length(w)
 length(a)
-length(f)
+length(b)
+length(c)
 
-mean(w)
-median(w)
 mean(a)
 median(a)
+mean(b)
+median(b)
 
 mean(b)
 median(b)
 sd(a)
-
-c=c(11:20,1:10,21:30)
-c
-c1=c("alex","amauri","angela","allan")
-c1
-sort(c1)
-sort.list(c1)
-
-sort(c)
-sort.list(c)
-
-order(c)
-rev(sort(c))
-d[!Worm.density=="NA",]
-
-mean(c)
-median(c)
 
 max(c)
 min(c)
@@ -152,3 +111,40 @@ e1=((x+y+z)-mean(w))*
 e1
 
 e==e1
+
+
+
+
+
+
+
+#Generating regular sequences
+seq(1,10,by=0.5)
+seq(1,50, by=5)
+f=seq(1,10,by=0.5)
+
+mean(f)
+median(f)
+
+g <- c(10,20,30,40,50)
+g
+
+h <- rep(2, times=5)
+h
+
+
+i=c(11:20,1:10,21:30)
+i
+
+j=c("alex","amauri","angela","allan")
+j
+
+sort(j)
+sort.list(cj)
+
+sort(i)
+sort.list(i)
+
+order(i)
+rev(sort(i))
+d[!Worm.density=="NA",
