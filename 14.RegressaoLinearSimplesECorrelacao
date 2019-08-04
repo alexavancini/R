@@ -12,3 +12,4 @@ cor(x,y)
 regressao <- lm(y~x)
 regressao
 abline(regressao)
+grid()
