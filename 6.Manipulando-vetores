@@ -11,6 +11,9 @@ seq(1,10,by=0.5)
 seq(1,50, by=5)
 f=seq(1,10,by=0.5)
 
+f2 <-scan() #enter
+#ctrl+V
+
 mean(f)
 median(f)
 
