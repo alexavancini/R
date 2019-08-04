@@ -1,0 +1,14 @@
+y<-scan()
+#Inserir os dados no console
+x<-scan()
+#Inserir os dados no console
+
+x
+y
+
+plot(x,y)
+cor(x,y)
+
+regressao <- lm(y~x)
+regressao
+abline(regressao)
