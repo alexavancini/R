@@ -1,0 +1,81 @@
+vetor1 <- 1:20
+vetor1
+
+matriz1 <- matrix(vetor1, 4,5) 
+matriz1
+
+matriz1[1,5]
+matriz1[4,1]
+
+matriz1[1,]
+matriz1[2,]
+matriz1[3,]
+matriz1[4,]
+
+matriz1[,1]
+matriz1[,2]
+matriz1[,3]
+matriz1[,4]
+
+matriz1[1:3,1:2]
+matriz1[3:4,3:5]
+
+matriz1 + 10
+matriz1 - 0.10
+matriz1 / 2
+matriz1 * 100
+matriz1 ^ 2
+log(matriz1)
+sin(matriz1)
+cos(matriz1)
+tan(matriz1)
+
+matriz1[,1] + 10
+matriz1[4,] /2
+
+?seq
+vetor2 <- seq(from=0.1, to=2, by=0.1)
+vetor2
+length(vetor2)
+
+matriz2 <- matrix(vetor2, 4,5)
+matriz2
+
+matriz1[1,1]+matriz2[1,1]
+matriz1[4,1]+matriz2[4,1]
+
+matriz1[2,1]*matriz2[1,1]
+matriz1[4,1]*matriz2[4,1]
+
+matriz1[1,5]*matriz2[1,5]/matriz1[1,2]
+
+matriz1+matriz2
+(matriz1+matriz2)/2
+
+matriz1^matriz2
+round(matriz1^matriz2, 2)
+
+matriz1
+rowSums(matriz1)
+colSums(matriz1)
+rowMeans(matriz1)
+colMeans(matriz1)
+
+#Matriz transposta
+matriz1
+matriz2
+t(matriz1)
+t(matriz2)
+
+#matriz inversa
+#É necessário uma matriz quadrada
+
+matriz3 <- matrix(c(3,5,7,10,15,20,2,1,2), ncol = 3)
+matriz3
+dim(matriz3)
+dim(matriz1)
+dim(matriz2)
+
+solve(matriz3) #Existe uma fórmula para se fazer a matriz invertida que explica estes resultados.
+det(matriz3) #Função det determina o determinante da matriz.
+
