@@ -11,5 +11,17 @@ cor(x,y)
 
 regressao <- lm(y~x)
 regressao
+
 abline(regressao)
 grid()
+
+#Regressão linear Simples
+      #(função afim (y=ax) = uma reta não vertical
+      #Obs:Reta vertical= y=c (Função constante)
+      #y=ax+b = Equação da reta de dois pontos x1,y1 e x2,y2
+
+#a = É o que a variável regressao apresenta como x (coeficiente de inclinação da reta) --> Coeficiente angular
+#b = É o que a variável regressao apresenta como Intercept (Inerpolador) --> Ponto de "partida" da reta no eixo y.
+#x = ?
+
+#r = cor(x,y)
