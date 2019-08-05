@@ -7,7 +7,15 @@ x
 y
 
 plot(x,y)
-cor(x,y)
+cor(x,y) #Coeficiente linear de Pearson, pode ser positivo (quando uma variável aumenta outra aumenta também) ou negativo(O contrário)
+#Classificação do coeficiente linear de Person seguindo Milone:
+#0.9 a 10 Otima 
+#0.8 a 0.9 Boa
+#0.7 a 0.8 Razoável
+#0.6 a 0.7 Medíocre 
+#0.5 a 0.6 Péssima 
+#<0.5 Imprópria
+
 
 regressao <- lm(y~x)
 regressao
@@ -21,7 +29,7 @@ grid()
       #y=ax+b = Equação da reta de dois pontos x1,y1 e x2,y2
 
 #a = É o que a variável regressao apresenta como x (coeficiente de inclinação da reta) --> Coeficiente angular
-#b = É o que a variável regressao apresenta como Intercept (Inerpolador) --> Ponto de "partida" da reta no eixo y.
+#b = É o que a variável regressao apresenta como Intercept (Inerpolador) --> Ponto de "partida" da reta no eixo y. Termo dependente
 #x = ?
 
 #r = cor(x,y)
