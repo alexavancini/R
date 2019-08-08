@@ -1,0 +1,66 @@
+data()
+data(orange)
+View(Orange)
+
+plot(Orange)
+plot(Orange$age, Orange$circumference)
+
+cor(Orange$age, Orange$circumference)
+cor.test(Orange$age, Orange$circumference)
+cor.test(Orange$age, Orange$circumference, method = "kendall")
+cor.test(Orange$age, Orange$circumference, method = "spearman")
+
+#Importando outro dataframe
+data()
+data("mtcars")
+View(mtcars)
+
+cor(mtcars)
+cor.test(mtcars)
+
+install.packages("corrplot")
+corrplot(m) #Vai dar um erro pois não importamos a biblioteca instalada
+library(corrplot)
+
+m<-cor(mtcars)
+m
+
+corrplot(m)
+
+corrplot(m, method = "color")
+corrplot(m, method = "ellipse")
+corrplot(m, method = "shade")
+corrplot(m, method = "number")
+
+corrplot(m, type = "upper")
+corrplot(m, type = "lower")
+
+corrplot(m, type = "lower", method = "number")
+corrplot(m, type = "lower", method = "color")
+corrplot(m, type = "upper", method = "ellipse")
+corrplot(m, type = "lower", method = "shade")
+
+#Instalando outro pacote de análise de correlação (Complemento ao anterior)
+install.packages("Hmisc") #Demora pra caramba pra instalar
+library(Hmisc)
+
+m <- rcorr(as.matrix(mtcars))
+m
+
+m$r #matriz de coeficiente de correção
+m$P #matriz de valor p
+m$n #matriz de valor n
+
+corrplot(m$r, p.mat = m$P, sig.level = 0.05)
+corrplot(m$r, p.mat = m$P, sig.level = 0.01, method = "number")
+corrplot(m$r, p.mat = m$P, sig.level = 0.01, method = "number", type = "upper")
+
+#Instalando outro pacote de análise de correlação
+
+install.packages("PerformanceAnalytics")
+library(PerformanceAnalytics)
+
+m2 <- mtcars[,c(1,3,4,5,6,7)]
+chart.Correlation(m2, histogram = TRUE)
+
+
