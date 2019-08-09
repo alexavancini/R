@@ -1,0 +1,29 @@
+x <- c(2,4,6,8,30)
+barplot(x)
+barplot(x, xlab = "Eixo X", ylab = "Eixo Y", col = "blue")
+
+barplot(x,
+        xlab = "Idade",
+        ylab = "Altura", 
+        col = "red"
+        )
+
+barplot(x,
+        space = FALSE,
+        names.arg = x,
+        col = c("red","blue","yellow","black","orange"),
+        legend.text = x,
+        #legend.text = c("vermelho","azul","amarelo","preto","laranja"),
+        main = "Idade x altura",
+        sub = "obs: Coleta realizada em 22/08/2019",
+        xlab = "Idade",
+        ylab = "Altura",
+        ylim = c(0,40),
+        xlim = c(0,6.2),
+        axes = TRUE,
+        plot = TRUE,
+)
+
+?barplot
+
+
