@@ -5,11 +5,15 @@ barplot(x, xlab = "Eixo X", ylab = "Eixo Y", col = "blue")
 barplot(x,
         xlab = "Idade",
         ylab = "Altura", 
-        col = "red"
+        col = "red",
+        horiz = TRUE
         )
 
 barplot(x,
+        width = 1,
+        #height = c(10,10.5,11,11.5,12),
         space = FALSE,
+        horiz = FALSE,
         names.arg = x,
         col = c("red","blue","yellow","black","orange"),
         legend.text = x,
@@ -20,9 +24,16 @@ barplot(x,
         ylab = "Altura",
         ylim = c(0,40),
         xlim = c(0,6.2),
+        #ylim = c(0, max(x)),
+        #xlim = c(0,ncol(x)),
         axes = TRUE,
         plot = TRUE,
-)
+        cex.names = 1,
+        cex.axis = 1,
+        #add = TRUE
+        )
+grid()
+grid(nx=20, ny=NULL)
 
 ?barplot
 
