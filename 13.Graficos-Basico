@@ -1,21 +1,23 @@
 x <- c(2,4,6,8,30)
+x
 barplot(x)
-barplot(x, xlab = "Eixo X", ylab = "Eixo Y", col = "blue")
+barplot(x, xlab = "Idade", ylab = "Altura", col = "red")
 
 barplot(x,
         xlab = "Idade",
-        ylab = "Altura", 
+        ylab = "Altura",
         col = "red",
-        horiz = TRUE
+        #col = c("blanchedalmond", "bisque1", "bisque2", "bisque3", "bisque4"),
+        #horiz = TRUE,
+        #las = 2
         )
 
 barplot(x,
-        width = 1,
-        #height = c(10,10.5,11,11.5,12),
-        space = FALSE,
+        space = NULL,
         horiz = FALSE,
         names.arg = x,
-        col = c("red","blue","yellow","black","orange"),
+        #col = c("red","blue","yellow","black","orange"),
+        col = c("blanchedalmond", "bisque1", "bisque2", "bisque3", "bisque4"),
         legend.text = x,
         #legend.text = c("vermelho","azul","amarelo","preto","laranja"),
         main = "Idade x altura",
@@ -23,18 +25,35 @@ barplot(x,
         xlab = "Idade",
         ylab = "Altura",
         ylim = c(0,40),
-        xlim = c(0,6.2),
+        xlim = c(0,5.6),
         #ylim = c(0, max(x)),
         #xlim = c(0,ncol(x)),
         axes = TRUE,
         plot = TRUE,
         cex.names = 1,
         cex.axis = 1,
-        #add = TRUE
+        border = T,
+        las = 1
+        #add = TRUE,
+        
         )
 grid()
 grid(nx=20, ny=NULL)
 
 ?barplot
 
+###Trabalhando com outro dataframe
+data()
+data("chickwts")
+chickwts
 
+barplot(chickwts$feed) #vai dar erro, pois para fazer barplot é necessário um vetor de dados.
+barplot(table(chickwts$feed)) #Com a função table transformandos os dados da coluna feed em um vetor de dados.
+
+plot(chickwts$feed)
+
+barplot(chickwts$weight)
+barplot(table(chickwts$weight))
+
+organizando <- table(chickwts$feed)
+barplot(organizando[order(organizando, decreasing = T)])
