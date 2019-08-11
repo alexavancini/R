@@ -130,3 +130,38 @@ arrows(                  #Arrows coloca as linhas pretas em cima do gráfico
   code=3,
   col="blue"
 )
+
+###PIE
+data()
+data(BOD)
+View(BOD)
+names(BOD)
+
+pie(BOD) #vai dar erro. Especificar um vetor com números para o gráfico.
+pie(BOD$demand)
+pie(BOD$demand, labels = BOD$demand)
+pie(BOD$demand, labels = BOD$demand, col = "red")
+pie(BOD$demand, 
+    labels = BOD$demand, 
+    col = c("royalblue", 
+            "chartreuse", 
+            "darkorange", 
+            "darkorchid",
+            "goldenrod1",
+            "deeppink"))
+
+pie(BOD$demand, 
+    labels = BOD$demand,
+    radius = 1.3,
+    clockwise = TRUE,
+    col = c("gray40", 
+            "gray50", 
+            "gray60", 
+            "gray70",
+            "gray80",
+            "gray90"),
+            border = TRUE,
+            density = NULL,
+            main = "BOD Demand",
+            col.main = "royalblue",
+            )
