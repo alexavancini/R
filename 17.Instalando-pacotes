@@ -1,0 +1,2 @@
+install.packages("package_name")
+library("package_name")
