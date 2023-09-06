@@ -102,3 +102,16 @@ o <- c("Genética", "Fisiologia", "Bioinformática", "Ecologia")
 o <- NULL #Função NULL apaga os dados das posições do vetor mas o vetor continua a existir (permanece declarado)
 rm(o) #A função rm remove o vetor, ou seja, retira o vetor da alocaão da memória.
 
+#Combinação
+numeros_combinados = c(101,201,301,401,501) # a função "c" (combinação) permite indicar os elementos que serão atribuídos ao objeto
+string_combinadas = c("João","Maria","José","Pedro","Ana")
+
+#Ficar atento ao combinar diferentes tipos de dados num mesmo objeto, ex: string e inteiror em uma mesma combinação.
+#O R consegue processar o pedido mas poderá haver problemas na hora de realizar tratamento estatístico.
+
+#Cálculos com vetores combinados
+notaProva1 = c(10,9,9.5,8,9)
+notaProva2 = c(9,9.5,10,9,8)
+notaTotal = notaProva1 + notaProva2
+print(notaTotal)
+
